@@ -11,6 +11,9 @@ export default function Layout() {
         <li>
           <Link to="/docs">Docs</Link>
         </li>
+        <li>
+          <Link to="/micro-app">micro-app</Link>
+        </li>
       </ul>
       <Outlet />
     </div>

@@ -1,8 +1,9 @@
 {
+  "name": "micro-app",
   "private": true,
   "author": "GaryHjy <782316959@qq.com>",
   "scripts": {
-    "dev": "PORT=3000 umi dev",
+    "dev": "umi dev",
     "build": "umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@umijs/plugins": "^4.0.78",
     "typescript": "^5.2.2"
   }
 }
