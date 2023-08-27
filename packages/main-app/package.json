@@ -9,6 +9,10 @@
     "setup": "umi setup",
     "start": "npm run dev"
   },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "dependencies": {
     "umi": "^4.0.78"
   },

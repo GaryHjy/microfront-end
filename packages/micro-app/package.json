@@ -12,6 +12,10 @@
   "dependencies": {
     "umi": "^4.0.78"
   },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "devDependencies": {
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
