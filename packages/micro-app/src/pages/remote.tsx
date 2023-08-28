@@ -1,11 +1,11 @@
 import { Suspense, lazy } from 'react';
 
-// const RemoteCard = lazy(() => {
-//   // @ts-ignore
-//   return import('remoteMain/Card');
-// });
-// @ts-ignore
-import  RemoteCard from 'remoteMain/Card';
+const RemoteCard = lazy(() => {
+  // @ts-ignore
+  return import('remoteMain/Card');
+});
+// // @ts-ignore
+// import  RemoteCard from 'remoteMain/Card';
 
 
 export default () => {

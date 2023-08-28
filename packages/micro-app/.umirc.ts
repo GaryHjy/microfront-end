@@ -12,7 +12,7 @@ const shared = {
 };
 
 export default defineConfig({
-  publicPath: 'http://localhost:3000/',
+  // publicPath: 'http://localhost:3000/',
   npmClient: 'pnpm',
   history: {
     type: 'hash'
@@ -21,7 +21,6 @@ export default defineConfig({
   qiankun: {
     slave: {},
   },
-  // plugins: ['@umijs/plugins/dist/mf'],
   mf: {
     // name: 'hostUser',
     remotes: [
@@ -34,5 +33,5 @@ export default defineConfig({
     ],
     // 配置 MF 共享的模块
     shared,
-  }
+  },
 });

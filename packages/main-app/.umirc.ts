@@ -15,6 +15,7 @@ const shared = {
 };
 
 export default defineConfig({
+  // publicPath: 'http://127.0.0.1:8000/',
   npmClient: 'pnpm',
   history: {
     type: 'hash'
@@ -36,6 +37,9 @@ export default defineConfig({
   plugins: ['@umijs/plugins/dist/qiankun', '@umijs/plugins/dist/mf'],
   qiankun: {
     master: {
+      // https://github.com/umijs/qiankun/issues/1148
+      // 沙箱需要关闭，否则会报错，会加载mf失败
+      // sandbox: false,
       apps: [
         {
           name: 'micro-app',
@@ -51,14 +55,13 @@ export default defineConfig({
       ],
     },
   },
-  // plugins: ['@umijs/plugins/dist/mf'],
   mf: {
     name: remoteMFName,
     shared,
     // 可选，远端模块库类型, 如果模块需要在乾坤子应用中使用建议配置示例的值，
     // 注意这里的 name 必须和最终 MF 模块的 name 一致
-    // library: { type: "window", name: remoteMFName },
+    library: { type: "window", name: remoteMFName },
   },
-  publicPath: 'http://127.0.0.1:8000/',
-  mfsu: false
+  // 如果使用基座暴漏 mf 对应的模块，需要配置 mfsu 为 false
+  mfsu: false,
 });
